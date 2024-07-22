@@ -1,3 +1,5 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 * { margin: 0; padding: 0 } 
     body {
         font: 18px/1.4 arial, sans-serif;
@@ -24,6 +26,23 @@
 
     nav>ul {
         margin-left: 50px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #004d06;
+    }
+
+    nav>ul>li>a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    nav>ul>li {
+        float: left;
     }
 
     nav>ul>li:first-child>a {
@@ -38,9 +57,8 @@
 
     nav>ul>li:last-child {
         font-size: 26px;
-        list-style-type: square;
     }
 
     nav >ul>li:nth-child(3) {
-        background: #ccc;
+        background: #00d853;
     }
