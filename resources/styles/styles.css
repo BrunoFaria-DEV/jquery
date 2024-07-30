@@ -1,0 +1,86 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 18px/1.4 arial, sans-serif;
+    height: 100%;
+}
+
+body>footer{
+    align-items: end;
+}
+
+footer {
+    margin-top:auto;
+    height: 52px;
+}
+
+header{
+    height: 160px;
+}
+
+div.container.principal{
+    min-height: calc(100vh - 212px);
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+hgroup>h1 {
+    font-size: 36px;
+    margin: 12px O 12px 0;
+}
+
+hgroup a {
+    color: #900;
+    text-decoration: none;
+}
+hgroup a:hover{
+    color: #900;
+    text-decoration: none;
+}
+
+h1~h2 {
+    font-size: 27px;
+    margin: 14px O 14px 0;
+    color: 4090;
+    text-decoration: none;
+}
+
+nav>ul {
+    margin-left: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #004d06;
+}
+
+nav>ul>li>a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+nav>ul>li>a:hover {
+    display: block;
+    color: rgb(228, 228, 228);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav>ul>li:hover {
+    background-color: #00920c;
+}
+
+nav>ul>li {
+    float: left;
+}

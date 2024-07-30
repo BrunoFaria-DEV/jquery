@@ -19,21 +19,43 @@
         </hgroup>
         <nav>
             <ul>
-                <li><a class="corrente" href="index.ntml">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="receitas.html">Receitas</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a class="links" href="index.html">Home</a></li>
+                <li><a class="links" href="sobre.html">Sobre</a></li>
+                <li><a class="links" href="receitas.html">Receitas</a></li>
+                <li><a class="links" href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <div class="container">
-        
+    <div class="container principal mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="card receitas" style="width: 18rem;">
+                    <img src="./resources/img/pudim.jpg" class="card-img-top" alt="Pudim">
+                    <div class="card-body">
+                        <h5 class="card-title">Pudim</h5>
+                        <p class="card-text">Receita rápida e fácil de pudim de leite.</p>
+                        <a href="receitas.html#pudim" class="btn btn-primary">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card receitas" style="width: 18rem;">
+                    <img src="./resources/img/bolo-mole.jpg" class="card-img-top" alt="Bolo de Chocolate">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolo de Chocolate</h5>
+                        <p class="card-text">Receita rápida e fácil de Bolo de Chocolate.</p>
+                        <a href="receitas.html#bolo" class="btn btn-primary">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer class="rodape">
         <div class="container text-center">
             <span class="text-muted">Trabalho de Frameworks Front-End.<br>Aluno: Bruno Faria.</span>
-          </div>
+        </div>
     </footer>
 </body>
 <script src="resources/scripts/ditoLambari.js"></script>
+
 </html>
