@@ -32,17 +32,33 @@ div.container.principal{
     justify-content: center;
 }
 
-hgroup>h1 {
-    font-size: 36px;
-    margin: 12px O 12px 0;
+hgroup{
+    background-color: rgb(43, 43, 43);
+    padding: 6px 0px 6px 0px;
+    padding-inline: 16px;
+    align-items: center;
+}
+
+hgroup>.social {
+    display: flex;
+    font-size: 13px;
+    margin-bottom: 0px;
+    color: white;
+    justify-content: end;
+}
+
+hgroup>.topbar-legend>h1 {
+    font-size: 13px;
+    margin-bottom: 0px;
+    color: white;
 }
 
 hgroup a {
-    color: #900;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 hgroup a:hover{
-    color: #900;
+    color: rgb(219, 219, 219);
     text-decoration: none;
 }
 
@@ -53,13 +69,24 @@ h1~h2 {
     text-decoration: none;
 }
 
+nav{
+    background-color: #004d06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-inline: 16px;
+}
+
 nav>ul {
     margin-left: 50px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #004d06;
+    display: flex;
+    justify-content: center;
 }
 
 nav>ul>li>a {
@@ -83,4 +110,8 @@ nav>ul>li:hover {
 
 nav>ul>li {
     float: left;
+}
+
+.brand{
+    width: 100px;
 }
