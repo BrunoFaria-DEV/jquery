@@ -35,5 +35,46 @@ $(function() {
     /////////////////////////////////////////////////////////////////////////////////
     ////                            PEDIDOS.HTML EVENTS                         ////
     /////////////////////////////////////////////////////////////////////////////////
-        
+        const pratos = [
+            {
+                'id' : 1,
+                'title' : 'Pudim de Leite',
+                'description' : 'Pudim de leite com calda de caramelo.',
+                'value' : 33.50
+            },
+            {
+                'id' : 2,
+                'title' : 'Bolo de Chocolate',
+                'description' : 'Bolo de chocolate com calda de chocolate.',
+                'value' : 55.97
+            },
+            {
+                'id' : 3,
+                'title' : 'Ventrecha de Pacu',
+                'description' : 'Ventrecha de Pacu frita com arros, batata frita, farofa de banana e salada.',
+                'value' : 155.77
+            },
+            {
+                'id' : 4,
+                'title' : 'Pintado Assado',
+                'description' : 'Ventrecha de Pacu frita com arros, batata frita, farofa de banana e salada.',
+                'value' : 253.33
+            },
+            {
+                'id' : 5,
+                'title' : 'Licor de Caju',
+                'description' : 'Ventrecha de Pacu frita com arros, batata frita, farofa de banana e salada.',
+                'value' : 53.33
+            },
+        ];
+
+        pratos.forEach(prato => {
+            $('#product0').append('<option value="' + prato.id + '">' + prato.title + '</option>')
+        });
+
+        $('.quantidade').on('input', function() {
+            $(this).val($(this).val().replace(/[^0-9]/g, ''));
+        });
+
+        // função javascript puro que foi utilizada console.log(pratos.find(prato => prato.id === 3).title);
 });
