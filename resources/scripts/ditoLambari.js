@@ -24,11 +24,11 @@ $(function() {
     // IMG CARD EVENT
     $('.receitas').on('mouseenter', function (e) {
         e.preventDefault();
-        $(this).find('img').fadeIn();
+        $(this).find('img').css({'width':  '110%', 'height': '110%'});
     });
     $('.receitas').on('mouseleave', function (e) {
         e.preventDefault();
-        $(this).find('img').fadeOut();
+        $(this).find('img').css({'width':  '100%', 'height': '100%'});
     });
     $('.receitas').trigger("mouseleave");
 
@@ -74,6 +74,13 @@ $(function() {
 
         $('.quantidade').on('input', function() {
             $(this).val($(this).val().replace(/[^0-9]/g, ''));
+        });
+
+        let row = 1;
+
+        $('.new-item').on('click', function(e){
+            e.preventDefault;
+            $(this).closest()
         });
 
         // função javascript puro que foi utilizada console.log(pratos.find(prato => prato.id === 3).title);

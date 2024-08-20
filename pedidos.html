@@ -13,10 +13,10 @@
 
 <body class="home">
     <header class="topo"></header>
-    <div class="container principal mt-4">
+    <div class="container principal pedido mt-4">
         
         <div class="row">
-            <div class="col itens">
+            <div class="col-12 col-lg-6 itens">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Email</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -25,15 +25,15 @@
                 <div class="form-group">
                     <label for="product0">Escolha o Seu Prato</label>
                     <select name="products[]" class="form-control mb-2" id="product0" placeholder="-- selecione --"></select>
-                    <input type="number" class="form-control quantidade mb-2"  placeholder="quantidade" pattern="\d*" oninput="validarInteiro(this)">
+                    <input type="number" class="form-control quantidade mb-2" placeholder="quantidade" pattern="\d*" oninput="validarInteiro(this)">
                     <button class="new-item form-control btn btn-primary">Novo Produto</button>
                 </div>
             </div>
-            <div class="col shopping-cart">
+            <div class="col-12 col-lg-6 shopping-cart">
                 <table class="products-cart-table">
                     <tr>
                         <td>
-                            <p class="produt-cart-item"></p>
+                            <p class="product-cart-item"></p>
                         </td>
                     </tr>
                 </table>
@@ -47,6 +47,7 @@
         </div>
     </footer>
 </body>
+
 <script src="resources/scripts/ditoLambari.js"></script>
 
 </html>

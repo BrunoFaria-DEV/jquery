@@ -32,6 +32,10 @@ div.container.principal{
     justify-content: center;
 }
 
+div.pedido{
+    display: block !important;
+}
+
 hgroup{
     background-color: rgb(43, 43, 43);
     padding: 6px 0px 6px 0px;
@@ -114,4 +118,15 @@ nav>ul>li {
 
 .brand{
     width: 100px;
+}
+
+.card>.div-img{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+
+.card>img{
+    width: 100%;
 }
