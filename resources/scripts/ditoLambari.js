@@ -1,5 +1,4 @@
 $(function() {
-
     // HEADER COMPONENT
     let header = '<hgroup class="d-flex"><div class="topbar-legend w-50">'
         header += '<h1>Site destinado a divulgar o trabalho de Dito Lambari</h1></div>'
@@ -17,7 +16,7 @@ $(function() {
     let activeLink = $('.links');
     for (let i = 0; i < activeLink.length; i++){
         if ($(location).attr('href').toLowerCase().includes($(activeLink[i]).attr('href'))) {
-            $(activeLink[i]).closest("li").css('background-color', '#00920c');
+            $(activeLink[i]).closest("li").css('background-color', 'rgb(1 118 112)');
         }
     }
 
@@ -35,6 +34,8 @@ $(function() {
     /////////////////////////////////////////////////////////////////////////////////
     ////                            PEDIDOS.HTML EVENTS                         ////
     /////////////////////////////////////////////////////////////////////////////////
+
+        /* Fake DataBase */
         const pratos = [
             {
                 'id' : 1,
@@ -67,21 +68,36 @@ $(function() {
                 'value' : 53.33
             },
         ];
-
+        /* first select */
         pratos.forEach(prato => {
-            $('#product0').append('<option value="' + prato.id + '">' + prato.title + '</option>')
+            $('#productRow0').find('select').append('<option value="' + prato.id + '">' + prato.title + '</option>')
         });
-
-        $('.quantidade').on('input', function() {
+        /* validate int values */
+        $(document).on('input', '.quantidade', function() {
             $(this).val($(this).val().replace(/[^0-9]/g, ''));
         });
+        /* index of dynamic product create */ 
+        let productRowControl = 0;
 
-        let row = 1;
-
-        $('.new-item').on('click', function(e){
+        $(document).on('click', '.new-item', function(e){
             e.preventDefault;
-            $(this).closest()
+            let newRow = $('#productExample').html();
+            $('.itens').append('<div id="productRow'+(productRowControl+1)+'" class="productRow form-group"></div>')
+            $('#productRow'+(productRowControl+1)).html(newRow);
+            pratos.forEach(prato => {
+                $('#productRow'+(productRowControl+1)).find('select').append('<option value="' + prato.id + '">' + prato.title + '</option>')
+            });
+            $('#productRow'+(productRowControl)).find('.new-item').remove();
+            $('#productRow'+(productRowControl+1)).append('<button class="new-item form-control mt-3 btn btn-primary">Adicionar Produto</button>');
+            productRowControl ++;
+        });
+
+         $(document).on('click', '.delete-item', function(e){
+            e.preventDefault;
+            let id = $(this).closest('div.productRow').attr('id').substring(10);
+            $(this).closest('div.productRow').remove();
         });
 
         // função javascript puro que foi utilizada console.log(pratos.find(prato => prato.id === 3).title);
+        console.log(pratos.find(prato => prato.id === 3).title)
 });
