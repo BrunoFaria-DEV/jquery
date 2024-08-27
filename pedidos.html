@@ -17,13 +17,15 @@
         <div class="row">
             <div class="col-12 col-lg-6 itens">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="cellphone">Celular</label>
+                    <input type="text" class="form-control" id="cellphone" placeholder="55 65 99999-9999">
                 </div>
                 <div id="productExample" hidden>
                     <label >Escolha o Seu Prato</label>
                     <select name="products[]" class="form-control mb-2" placeholder="-- selecione --"></select>
-                    <input type="number" class="form-control quantidade mb-2" placeholder="quantidade">
+                    <input type="number" class="form-control quantidade mb-2" placeholder="quantidade" min = "1">
                     <div class="d-flex">
                         <button class="delete-item form-control btn btn-danger">Retirar Produto</button>
                     </div>
@@ -31,7 +33,7 @@
                 <div id="productRow0" class="productRow form-group">
                     <label >Escolha o Seu Prato</label>
                     <select name="products[]" class="form-control mb-2" placeholder="-- selecione --"></select>
-                    <input type="number" class="form-control quantidade mb-2" placeholder="quantidade">
+                    <input type="number" class="form-control quantidade mb-2" placeholder="quantidade" min = "1">
                     <button class="delete-item form-control btn btn-danger">Retirar Produto</button>
                     <button class="new-item form-control mt-3 btn btn-primary">Adicionar Produto</button>
                 </div>
